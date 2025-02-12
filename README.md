@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inventory Management System
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The **Inventory Management System** is designed to help **XYZ Organization** efficiently track and manage inventory, including items like **laptops, furniture, and cleaning materials**. The system features **role-based access control (RBAC)** to ensure secure and organized inventory management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **User Authentication & Role Management**
+  - Users must log in to access the system.
+  - Only **Super Admins** and **Inventory Managers** can create users.
+  - Roles: `Super Admin`, `Inventory Manager`, and `Program Manager`.
+- **Pagination**
+  - Users list are paginated for better usability.
+
+## Tech Stack
+
+### Frontend
+
+- **Next.js (React Framework)**
+- **TypeScript**
+- **Tailwind CSS** (for styling)
+
+### Backend
+
+- **Firebase Firestore** (for database & authentication)
+
+## Installation & Setup
+
+### Clone the Repository
+
+```sh
+git clone https://github.com/ktscates/inventory-management.git
+cd inventory-management
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Environment Variables
 
-## Learn More
+Create a `.env.local` file and configure Firebase:
 
-To learn more about Next.js, take a look at the following resources:
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running the Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run dev
+```
 
-## Deploy on Vercel
+This will start the development server at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### User Roles & Access
+
+- **Super Admin**: Full access to all features.
+- **Inventory Manager**: Manages inventory and users (except Super Admins).
+- **Program Manager**: Can view and request items but cannot manage inventory.
+
+### Managing Users
+
+- Click **Create User** to add a new user.
+- Edit user details by clicking **Edit**.
+- Delete users by clicking **Delete** (except Super Admins).
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+🚀 **Happy Coding!**
