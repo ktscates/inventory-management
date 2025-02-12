@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Inventory Management System** is designed to help **XYZ Organization** efficiently track and manage inventory, including items like **laptops, furniture, and cleaning materials**. The system features **role-based access control (RBAC)** to ensure secure and organized inventory management.
+The **Inventory Management System** is designed to help efficiently track and manage inventory, including items like **laptops, furniture, and cleaning materials**. The system features **role-based access control (RBAC)** to ensure secure and organized inventory management.
 
 ## Features
 
